@@ -12,5 +12,16 @@ document.getElementById("newItemForm").addEventListener("submit", function(event
 function fetchAndDisplayNewItem(type, count) {
     fetch(`${customEndPoints[type]}?_limit = ${count}`)
     .then(response => response.json())
-    
+    .then(data => {
+        const outputDiv = document.getElementById(`${type}Output`) || createOutputDiv(type);
+        outputDiv.innerHTML = "<h3>${capitalizeFirstLetter(type)}</h3>";
+        data.forEach(item => {
+            const div = document.createElement("div");
+            div.className = 'data-item';
+            div.innerHTML = `
+            <p><strong>ID:</strong> ${item.id}</p>
+            <p><strong>Title:</strong> ${item.title}</p>`;
+            outputDiv.appendChild(div);
+        });
+    })
 }
