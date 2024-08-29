@@ -11,8 +11,23 @@ document.getElementById("dataForm").addEventListener("submit", function (event){
                 case 'photos':
                     fetchPhotos(count);
                     break;
-            
+                case 'posts':
+                    fetchPosts(count);
+                    break;
+                case 'comments':
+                    fetchComments(count);
+                    break;
+                case 'albums':
+                    fetchAlbums(count);
+                    break;
+                case 'users':
+                    fetchUsers(count);
+                    break;
+                case 'todos':
+                    fetchTodos(count);
+                    break;
                 default:
+                    console.error("Unknown key:", key);
                     break;
             }
         }
