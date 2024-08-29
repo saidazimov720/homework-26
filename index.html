@@ -7,24 +7,29 @@
 </head>
 <body>
     <div class="in_box">
-        <h1>JSplaceholder data taker</h1>
-        <form action="" id="dataForm">
-            <label for="query">Enter the your query:</label>
-            <input type="text" id="query" name="query" placeholder="Enter the your query.." required>
-            <button type="submit">Take data</button>
+        <h1>Fetch JSONPlaceholder Data</h1>
+        <form id="dataForm">
+            <label for="query">Enter your query:</label>
+            <input type="text" id="query" name="query" placeholder="e.g., photos=30, posts=10" required>
+            <button type="submit">Fetch Data</button>
         </form>
-        <h2>Add New Item Type</h2>
+        <h2>Add and Fetch New Item Type</h2>
         <form id="newItemForm">
-            <label for="newItemType">Item Type:</label>
-            <input type="text" id="newItemType" name="newItemType" placeholder="e.g., posts" required>
-            <label for="newItemUrl">API URL:</label>
-            <input type="text" id="newItemUrl" name="newItemUrl" placeholder="e.g., https://jsonplaceholder.typicode.com/posts" required>
-            <button type="submit">Add New Item</button>
-        </form>
-
-        <div id="customOutputs"></div>
+            <label for="newItemType">Select Item Type:</label>
+            <select id="newItemType" name="newItemType" required>
+                <option value="photos">Photos</option>
+                <option value="posts">Posts</option>
+                <option value="comments">Comments</option>
+                <option value="albums">Albums</option>
+                <option value="users">Users</option>
+                <option value="todos">Todos</option>
+            </select>
+            <label for="itemCount">Number of items to fetch:</label>
+            <input type="number" id="itemCount" name="itemCount" min="1" placeholder="e.g., 5" required>
+            <button type="submit">Add and Fetch</button>
+            <div id="customOutputs"></div>
         <div id="output">
-            <h3>Fetched data</h3>
+            <h2>Fetched Data</h2>
             <div id="photosOutput"></div>
             <div id="postsOutput"></div>
             <div id="commentsOutput"></div>
@@ -32,6 +37,7 @@
             <div id="usersOutput"></div>
             <div id="todosOutput"></div>
         </div>
+        </form>
     </div>
     <script src="./script.js"></script>
 </body>
