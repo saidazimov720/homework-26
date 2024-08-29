@@ -30,6 +30,8 @@ document.getElementById("dataForm").addEventListener("submit", function (event){
                     console.error("Unknown key:", key);
                     break;
             }
+        }else{
+            console.error("Invalid input", queryItem);
         }
     });
-})
+});
