@@ -8,3 +8,9 @@ document.getElementById("newItemForm").addEventListener("submit", function(event
         console.error("Invalid input");
     }
 });
+
+function fetchAndDisplayNewItem(type, count) {
+    fetch(`${customEndPoints[type]}?_limit = ${count}`)
+    .then(response => response.json())
+    
+}
