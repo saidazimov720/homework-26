@@ -9,4 +9,10 @@ const customEndPoints = {
 
 function fetchData(type, count) {
     fetch(`${customEndPoints[type]}?_limit=${count}`)
+    .then(response => response.json())
+    .then(data => {
+      const outputDiv = document.getElementById(`${type}Output`) || createOutputDiv(type);
+      outputDiv.innerHTML = `<h3>${capitalizeFirstLetter(type)}</h3>`;
+       
+    })
 }
