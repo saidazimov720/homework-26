@@ -6,3 +6,7 @@ const customEndPoints = {
     users: "https://jsonplaceholder.typicode.com/users",
     todos: "https://jsonplaceholder.typicode.com/todos"
 };
+
+function fetchData(type, count) {
+    fetch(`${customEndPoints[type]}?_limit=${count}`)
+}
