@@ -17,6 +17,8 @@ function fetchData(type, count) {
         const div = document.createElement("div");
         div.className = "data-item";
         div.innerHTML = JSON.stringify(item, null, 2);
+        outputDiv.appendchild(div);
       });
     })
+    .catch(error => console.error(`Error : ${type}`, error));
 }
