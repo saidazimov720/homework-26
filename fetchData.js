@@ -13,6 +13,10 @@ function fetchData(type, count) {
     .then(data => {
       const outputDiv = document.getElementById(`${type}Output`) || createOutputDiv(type);
       outputDiv.innerHTML = `<h3>${capitalizeFirstLetter(type)}</h3>`;
-       
+      data.forEach(item => {
+        const div = document.createElement("div");
+        div.className = "data-item";
+        div.innerHTML = JSON.stringify(item, null, 2);
+      });
     })
 }
