@@ -54,3 +54,6 @@ button:active{
 #output{
     margin-top: 20px;
 }
+#photoOutput, #postsOutput, #commentsOutput, #albumsOutput, #usersOutput, #todosOutput{
+    margin-bottom: 20px;
+}
