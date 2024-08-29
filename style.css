@@ -4,26 +4,36 @@
     padding: 0;
 }
 .in_box{
-    max-width: 600px;
-    margin: 0 auto;
-    background: white;
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-h1{
+h1 h2{
     text-align: center;
+    color: #333;
 }
 form{
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
 }
 label{
-    margin-bottom: 15px;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 16px;
 }
 button{
     padding: 17px 40px;
@@ -61,6 +71,24 @@ button:active{
     padding: 10px;
     border-bottom: 1px solid whitesmoke;
 }
+.data-item p{
+    margin: 5px 0;
+}
+.data-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
 .data-item:last-child{
     border-bottom: none;
+}
+#output,
+#customOutputs {
+    margin-top: 30px;
+}
+
+h3 {
+    margin-bottom: 15px;
+    color: #007BFF;
 }
