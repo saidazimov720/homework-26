@@ -61,3 +61,6 @@ button:active{
     padding: 10px;
     border-bottom: 1px solid whitesmoke;
 }
+.data-item:last-child{
+    border-bottom: none;
+}
