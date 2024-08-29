@@ -57,3 +57,7 @@ button:active{
 #photoOutput, #postsOutput, #commentsOutput, #albumsOutput, #usersOutput, #todosOutput{
     margin-bottom: 20px;
 }
+.data-item{
+    padding: 10px;
+    border-bottom: 1px solid whitesmoke;
+}
