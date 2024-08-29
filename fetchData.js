@@ -26,5 +26,6 @@ function fetchData(type, count) {
 function createOutputDiv(type) {
     const outputDiv = document.createElement('div');
     outputDiv.id = `${type}Output`;
-    
+    document.getElementById('customOutputs').appendChild(outputDiv);
+    return outputDiv;
 }
