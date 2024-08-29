@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Fetch JSONPlaceholder Data</title>
 </head>
 <body>
     <div class="in_box">
@@ -14,6 +14,7 @@
             <input type="text" id="query" name="query" placeholder="e.g., photos=30, posts=10" required>
             <button type="submit">Fetch Data</button>
         </form>
+        
         <h2>Add and Fetch New Item Type</h2>
         <form id="newItemForm">
             <label for="newItemType">Select Item Type:</label>
@@ -25,12 +26,16 @@
                 <option value="users">Users</option>
                 <option value="todos">Todos</option>
             </select>
-            <label for="itemCount">Number of items to fetch:</label>
-            <input type="number" id="itemCount" name="itemCount" min="1" placeholder="e.g., 5" required>
+            <label for="newItemId">New Item ID:</label>
+            <input type="number" id="newItemId" name="newItemId" min="1" placeholder="e.g., 101" required>
+            <label for="newItemTitle">New Item Title:</label>
+            <input type="text" id="newItemTitle" name="newItemTitle" placeholder="e.g., New Post Title" required>
             <button type="submit">Add and Fetch</button>
-            <div id="customOutputs"></div>
+        </form>
+        <div id="customOutputs"></div>
+
+        <h2>Fetched Data</h2>
         <div id="output">
-            <h2>Fetched Data</h2>
             <div id="photosOutput"></div>
             <div id="postsOutput"></div>
             <div id="commentsOutput"></div>
@@ -38,9 +43,7 @@
             <div id="usersOutput"></div>
             <div id="todosOutput"></div>
         </div>
-        </form>
     </div>
     <script src="./fetchData.js"></script>
-    <script src="./addNewItem.js"></script>
 </body>
 </html>
