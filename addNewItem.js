@@ -23,5 +23,5 @@ function fetchAndDisplayNewItem(type, count) {
             <p><strong>Title:</strong> ${item.title}</p>`;
             outputDiv.appendChild(div);
         });
-    })
+    }).catch(error => console.error(`Fetch error: ${type}`, error));
 }
