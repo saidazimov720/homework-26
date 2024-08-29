@@ -22,3 +22,8 @@ function fetchData(type, count) {
     })
     .catch(error => console.error(`Error : ${type}`, error));
 }
+
+function createOutputDiv(type) {
+    const outputDiv = document.createElement('div');
+    outputDiv.id = `${type}Output`;
+}
