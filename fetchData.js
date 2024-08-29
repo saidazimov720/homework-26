@@ -29,3 +29,6 @@ function createOutputDiv(type) {
     document.getElementById('customOutputs').appendChild(outputDiv);
     return outputDiv;
 }
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUppercase() + string.slice(1);
+}
