@@ -51,3 +51,6 @@ button:active{
     transform: translateY(10px);
     transition: 100ms;
 }
+#output{
+    margin-top: 20px;
+}
