@@ -26,6 +26,9 @@ function fetchAndDisplayNewItem(type, count) {
     }).catch(error => console.error(`Fetch error: ${type}`, error));
 }
 
-function createOutputDiv() {
-    
+function createOutputDiv(type) {
+    const outputDiv = document.createElement('div');
+    outputDiv.id = `${type} Output`;
+    document.getElementById("customOutputs").appendChild(outputDiv);
+    return outputDiv;
 }
