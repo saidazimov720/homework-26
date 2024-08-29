@@ -1,6 +1,6 @@
 document.getElementById("newItemForm").addEventListener("submit", function(event)  {
     event.preventDefault();
-    const newItemtype = document.getElementById("newItemType").value.trim().toLoweCase();
+    const newItemtype = document.getElementById("newItemType").value.trim().toLowerCase();
     const itemCount = parseInt(document.getElementById("itemCount").value, 10);
     if (newItemtype && !isNaN(itemCount) && customEndPoints[newItemtype]) {
         fetchAndDisplayNewItem(newItemtype, itemCount);
