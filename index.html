@@ -13,6 +13,16 @@
             <input type="text" id="query" name="query" placeholder="Enter the your query.." required>
             <button type="submit">Take data</button>
         </form>
+        <h2>Add New Item Type</h2>
+        <form id="newItemForm">
+            <label for="newItemType">Item Type:</label>
+            <input type="text" id="newItemType" name="newItemType" placeholder="e.g., posts" required>
+            <label for="newItemUrl">API URL:</label>
+            <input type="text" id="newItemUrl" name="newItemUrl" placeholder="e.g., https://jsonplaceholder.typicode.com/posts" required>
+            <button type="submit">Add New Item</button>
+        </form>
+
+        <div id="customOutputs"></div>
         <div id="output">
             <h3>Fetched data</h3>
             <div id="photosOutput"></div>
