@@ -8,10 +8,10 @@ document.getElementById('newItemForm').addEventListener('submit', function() {
         addNewItem(newItemType, newItemID, newItemTitle)
             .then(success => {
                 if (success) {
-                    alert('New data added successfully');
+                    this.innerHTML = `<p>New data added successfully</p>`
                     addNewItemOutput(newItemType, newItemID, newItemTitle);
                 } else {
-                    alert('The new data didn\'t add successfully');
+                    this.innerHTML = `<p>The new data didn\'t add successfully</p>`
                 }
             });
     } else {
