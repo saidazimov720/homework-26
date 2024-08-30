@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Fetch JSONPlaceholder Data</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="in_box">
-        <h1>Fetch JSONPlaceholder Data</h1>
-        <form id="dataForm">
-            <label for="query">Enter your query:</label>
-            <input type="text" id="query" name="query" placeholder="e.g., photos=30, posts=10" required>
-            <button type="submit">Fetch Data</button>
-        </form>
-        
-        <h2>Add and Fetch New Item Type</h2>
-        <form id="newItemForm">
-            <label for="newItemType">Select Item Type:</label>
-            <select id="newItemType" name="newItemType" required>
-                <option value="photos">Photos</option>
-                <option value="posts">Posts</option>
-                <option value="comments">Comments</option>
-                <option value="albums">Albums</option>
-                <option value="users">Users</option>
-                <option value="todos">Todos</option>
-            </select>
-            <label for="newItemId">New Item ID:</label>
-            <input type="number" id="newItemId" name="newItemId" min="1" placeholder="e.g., 101" required>
-            <label for="newItemTitle">New Item Title:</label>
-            <input type="text" id="newItemTitle" name="newItemTitle" placeholder="e.g., New Post Title" required>
-            <button type="submit">Add and Fetch</button>
-        </form>
-        <div id="customOutputs"></div>
+      <h1>Fetch JSONPlaceholder Data</h1>
+      <form id="dataForm">
+        <label for="query">Enter your query:</label>
+        <input
+          type="text"
+          id="query"
+          name="query"
+          placeholder="e.g., photos=30, posts=10"
+          required
+        />
+        <button type="submit">Fetch Data</button>
+      </form>
 
-        <h2>Fetched Data</h2>
-        <div id="output">
-            <div id="photosOutput"></div>
-            <div id="postsOutput"></div>
-            <div id="commentsOutput"></div>
-            <div id="albumsOutput"></div>
-            <div id="usersOutput"></div>
-            <div id="todosOutput"></div>
-        </div>
+      <h2>Add and Fetch New Item Type</h2>
+      <form id="newItemForm">
+        <label for="newItemType">Select Item Type:</label>
+        <select id="newItemType" name="newItemType" required>
+          <option value="photos">Photos</option>
+          <option value="posts">Posts</option>
+          <option value="comments">Comments</option>
+          <option value="albums">Albums</option>
+          <option value="users">Users</option>
+          <option value="todos">Todos</option>
+        </select>
+        <label for="newItemID">ID:</label>
+        <input type="text" id="newItemID" name="newItemID" required />
+        <label for="newItemTitle">Title:</label>
+        <input type="text" id="newItemTitle" name="newItemTitle" required />
+        <button type="submit">Add and Fetch</button>
+      </form>
+      <div id="customOutputs"></div>
+
+      <h2>Fetched Data</h2>
+      <div id="output">
+        <div id="photosOutput"></div>
+        <div id="postsOutput"></div>
+        <div id="commentsOutput"></div>
+        <div id="albumsOutput"></div>
+        <div id="usersOutput"></div>
+        <div id="todosOutput"></div>
+      </div>
     </div>
     <script src="./fetchData.js"></script>
-</body>
+  </body>
 </html>
