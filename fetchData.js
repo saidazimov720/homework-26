@@ -16,9 +16,8 @@ document.getElementById('dataForm').addEventListener('submit', function(event) {
         const [key, value] = queryItem.split('=');
         const count = parseInt(value, 10);
         if (key && !isNaN(count)) {
-            const type = key.toLowerCase();
-            if (customEndpoints[type]) {
-                fetchData(type, count);
+            if (customEndpoints[key.toLowerCase()]) {
+                fetchData(key.toLowerCase(), count);
             } else {
                 console.error('Unknown key:', key);
             }
@@ -37,7 +36,11 @@ function fetchData(type, count) {
             data.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'data-item';
-                div.innerHTML = JSON.stringify(item, null, 2);
+                if (item.url && item.url.includes('http')) {
+                    div.innerHTML = `<img src="${item.url}" alt="${type}" /><br/>` + JSON.stringify(item, null, 2);
+                } else {
+                    div.innerHTML = JSON.stringify(item, null, 2);
+                }
                 outputDiv.appendChild(div);
             });
         })
