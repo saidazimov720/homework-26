@@ -1,5 +1,4 @@
-document.getElementById('newItemForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.getElementById('newItemForm').addEventListener('submit', function() {
 
     const newItemType = document.getElementById('newItemType').value.trim().toLowerCase();
     const newItemID = document.getElementById('newItemID').value.trim();
@@ -16,7 +15,7 @@ document.getElementById('newItemForm').addEventListener('submit', function(event
                 }
             });
     } else {
-        console.error('Invalid input for new item');
+        alert('Invalid input for new item');
     }
 });
 
